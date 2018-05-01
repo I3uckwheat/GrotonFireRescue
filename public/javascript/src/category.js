@@ -1,3 +1,12 @@
+if (window.NodeList && !NodeList.prototype.forEach) { // TODO - add shim to babel
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (let i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
+}
+
 const body = document.querySelector('body');
 
 document.querySelectorAll('.card').forEach((card) => {
