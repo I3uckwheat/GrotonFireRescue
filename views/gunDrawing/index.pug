@@ -18,18 +18,43 @@ block content
     br
 
     h2 Winners
+
+    div.years
+      each year, index in allYears
+        if index === 0
+          p.year.current
+            = year
+        else
+          p.year
+            = year
+
     for winner in winners
-      .card(id=winner._id)
-        if user
-          .adminControls
-            button(type="button").edit edit
-            button(type="button").delete delete
-        h3.name= winner.fullName
-        h5.location= winner.location
-        p.gun= winner.gun
-        p.date= winner.date.toDateString()
-        .shortLine
+      if winner.date.getFullYear().toString() === currentYear
+        .card.current-year(id=winner._id)
+          if user
+            .adminControls
+              button(type="button").edit edit
+              button(type="button").delete delete
+          h3.name= winner.fullName
+          h5.location= winner.location
+          p.gun= winner.gun
+          p.date= winner.date.toDateString()
+          .shortLine
+          p(data-year= winner.date.getFullYear() hidden).winner-year
+      else
+        .card.hidden(id=winner._id)
+          if user
+            .adminControls
+              button(type="button").edit edit
+              button(type="button").delete delete
+          h3.name= winner.fullName
+          h5.location= winner.location
+          p.gun= winner.gun
+          p.date= winner.date.toDateString()
+          .shortLine
+          p(data-year= winner.date.getFullYear() hidden).winner-year
 
 block scripts
+  script(src="/javascript/gunDrawing.js")
   if user
     script(src="/javascript/adminGunDrawing.js")

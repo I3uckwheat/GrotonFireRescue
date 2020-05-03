@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
-require('dotenv').config({
-  path: 'variables.env'
-});
+require('dotenv').config();
 
 mongoose.connect(process.env.DATABASE, {
   reconnectTries: Number.MAX_VALUE,
