@@ -54,15 +54,24 @@
   flex-direction: row;
   justify-content: flex-start;
   border-bottom: 1px solid #b8860b;
+  flex-wrap: wrap;
 }
 
-.year {
+.year-button {
   padding: 10px 20px;
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: #232f3c;
 }
 
-.year:hover {
+.year-button:hover {
   background: #efefef;
   cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: #232f3c;
 }
 
 .current {
