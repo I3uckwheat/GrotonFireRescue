@@ -1,16 +1,4 @@
 node_modules
-.possible npm
-variables.env
-red-fire-color-combination-by-schemecolor.png
-.eslintrc.js
+dist
 .vscode
-.eslintrc.json
-public/images/gallery
-public/images/home
-.babelrc
-webpack.config.js
-palette.pdf
-README.md
-public/javascript/src
-public/javascript/src/*
 .env

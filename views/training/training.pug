@@ -3,64 +3,46 @@ extends ../layout
 block stylesheets
   link(rel="stylesheet" href="/stylesheets/training.css")
 
-block adminButton
-  if(user)
-    a.adminButton(href="/training/new") New Training Item
-
 block content
 
-  - const anyRepeats = trainingDays.some((day) => day.trainingType === 'repeat')
-  - const anySpecial = trainingDays.some((day) => day.trainingType === 'special')
+  - const anyRepeats = trainingDays.some((day) => day.type === 'repeat')
+  - const anySpecial = trainingDays.some((day) => day.type === 'special')
 
   .inner
     if(anyRepeats)
       .repeatTraining.training
         h4 Repeat Trainings/Meetings
         for day in trainingDays
-          if (day.trainingType === 'repeat')
-            .card(id= day._id)
-
-              if user
-                .adminControls
-                  button(type="button").edit edit
-                  button(type="button").delete delete
-
+          if (day.type === 'repeat')
+            .card
               .cardInfo
                 .cardTitle
                   h3.title= day.title
                   p.location= day.location
-                  p.date= day.whenMessage
+                  p.date= day.when
                   .arrowButton
-                    .arrow
-                  .accentLine.hidden
-                .dropDown.hidden
+                    .arrow.arrowDown
+                  .accentLine
+                .dropDown
                   pre.info= day.info
 
     if(anySpecial)
       .training
         h4 Special Trainings/Meetings
         for day in trainingDays
-          if (day.trainingType === 'special')
-            .card(id= day._id)
-
-              if user
-                .adminControls
-                  button(type="button").edit edit
-                  button(type="button").delete delete
-
+          if (day.type === 'special')
+            .card
               .cardInfo
                 .cardTitle
                   h3.title= day.title
                   p.location= day.location
-                  p.date= day.dateTimeRange
+                  p.date= day.when
                   .arrowButton
-                    .arrow
-                  .accentLine.hidden
-                .dropDown.hidden
+                    .arrow.arrowDown
+                  .accentLine
+                .dropDown
                   pre.info= day.info
 
 
 block scripts
   script(src="/javascript/training.js")
-  if user
-    script(src="/javascript/adminTraining.js")

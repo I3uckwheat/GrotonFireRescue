@@ -1,0 +1,17 @@
+{
+  "_comment": "Sections shown on the home page, in order. Each section's image lives at public/images/home/<pageID>.jpg and its text in data/<contentFile>. 'aboutLink' is optional and must match a 'pageLinkName' in data/about.json; leave it out to hide the 'More about' link.",
+  "sections": [
+    {
+      "pageID": "0",
+      "pageTitle": "Groton Fire",
+      "aboutLink": "grotonfire",
+      "contentFile": "home/grotonfire.txt"
+    },
+    {
+      "pageID": "1",
+      "pageTitle": "Rescue Squad",
+      "aboutLink": "rescuesquad",
+      "contentFile": "home/rescuesquad.txt"
+    }
+  ]
+}

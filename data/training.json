@@ -1,0 +1,31 @@
+{
+  "_comment": "Shown at /training. 'type' is 'repeat' (recurring) or 'special' (one-time); 'when' is shown as-is on the card; 'info' is the expandable detail text and may be a list of lines or a single string.",
+  "items": [
+    {
+      "type": "repeat",
+      "title": "Training",
+      "location": "Groton Fire Hall",
+      "when": "4th Tuesday of Each Month - 12:00 AM",
+      "info": [
+        "Groton Community Fire Department",
+        "Physical Address:",
+        "305 E. Railroad Ave.",
+        "P.O. Box 352",
+        "Groton, SD 57445"
+      ]
+    },
+    {
+      "type": "repeat",
+      "title": "Monthly Meeting",
+      "location": "Groton Fire Hall",
+      "when": "2nd Monday of Each Month - 12:00 AM",
+      "info": [
+        "Groton Community Fire Department",
+        "Physical Address:",
+        "305 E. Railroad Ave.",
+        "P.O. Box 352",
+        "Groton, SD 57445"
+      ]
+    }
+  ]
+}

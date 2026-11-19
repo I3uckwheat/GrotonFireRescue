@@ -1,47 +1,31 @@
 doctype html
 html
   head
-    title #{title || h.siteName}
+    title #{title || 'Groton Fire & Rescue'}
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="icon" href="/favicon.ico")
     link(rel="stylesheet" href="/stylesheets/reset.css")
     link(rel="stylesheet" href="/stylesheets/style.css")
     link(href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet")
-    if user
-      link(rel="stylesheet" href="/stylesheets/admin.css")
     block stylesheets
 
   body
 
     header
-      a(href="/") #[img#cross(src="/images/cross.png")]
+      a(href="/") #[img#cross(src="/images/cross.png" alt="Groton Fire & Rescue")]
       nav.primary-nav
         a(href="/") Home
-        a(href="/gallery") Photo Gallery
-        a(href="/gun-drawing") Gun Drawing
+        a(href="https://www.facebook.com/GrotonFireAndRescue/photos" target="_blank" rel="noopener") Photo Gallery
+        a(href="https://www.facebook.com/GrotonFireAndRescue" target="_blank" rel="noopener") Gun Drawing
         a(href="/training") Training & Meetings
-        //- li #[a(href="/calender") Calender Fundraiser] //- TODO - implement
 
       img#hamburgerMenu.collapsed.hidden(src='/images/hamburgerMenuWhite.png')
-      if user
-        include admin/mixins/_adminBar
-        +adminBar()
-
-
-    .flashes
-      for flash in flashes
-        .flash
-          p=flash
-          button.close close
 
     .content
       .titleContainer
         h1#pageTitle #{title}
-        block adminButton
         block userButton
       block content
-
-    //- footer
-
 
   block scripts
   script(src="/javascript/layout.js")

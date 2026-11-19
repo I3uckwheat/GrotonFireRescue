@@ -1,4 +1,37 @@
-pre {
-  width: 100%;
-  white-space: pre-line;
+.aboutText {
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+.aboutText p {
+  margin: 0 0 1.1em;
+}
+
+.aboutText h2 {
+  font-family: 'Alfa Slab One', 'Helvetica', sans-serif;
+  color: #9f2122;
+  font-size: 1.6em;
+  margin: 1.6em 0 0.4em;
+}
+
+.aboutText table {
+  border-collapse: collapse;
+  margin: 1.2em 0 1.4em;
+}
+
+.aboutText th,
+.aboutText td {
+  padding: 0.35em 1.4em 0.35em 0.6em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.aboutText th {
+  background-color: #9f2122;
+  color: #f5f5f5;
+}
+
+.aboutText tbody tr:nth-child(even) td {
+  background-color: #f5f5f5;
 }

@@ -1,0 +1,28 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The gun drawing moved to the department's Facebook page
+[[redirects]]
+  from = "/gun-drawing"
+  to = "https://www.facebook.com/GrotonFireAndRescue"
+  status = 302
+
+[[redirects]]
+  from = "/gun-drawing/*"
+  to = "https://www.facebook.com/GrotonFireAndRescue"
+  status = 302
+
+# The photo gallery moved to the Facebook page's photos
+[[redirects]]
+  from = "/gallery"
+  to = "https://www.facebook.com/GrotonFireAndRescue/photos"
+  status = 302
+
+[[redirects]]
+  from = "/gallery/*"
+  to = "https://www.facebook.com/GrotonFireAndRescue/photos"
+  status = 302

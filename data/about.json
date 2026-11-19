@@ -1,0 +1,15 @@
+{
+  "_comment": "Full 'About' pages. Each is published at /about/<pageLinkName>, with its text in data/<contentFile>, written in Markdown (blank line between paragraphs; ## Heading; *italics*; | tables |).",
+  "pages": [
+    {
+      "pageTitle": "About Groton Fire",
+      "pageLinkName": "grotonfire",
+      "contentFile": "about/grotonfire.md"
+    },
+    {
+      "pageTitle": "About the Rescue Squad",
+      "pageLinkName": "rescuesquad",
+      "contentFile": "about/rescuesquad.md"
+    }
+  ]
+}

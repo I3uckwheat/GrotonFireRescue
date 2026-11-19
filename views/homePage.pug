@@ -21,7 +21,8 @@ block content
       .info
         h2= page.pageTitle
         .contentContainer
-          img(src=`images/home/${page.pageID}.jpg`)
+          img(src=`/images/home/${page.pageID}.jpg` alt=page.pageTitle)
           .textContent
             pre= page.content
-            a(href=`about/${page.pageTitle.split(' ').join('').toLowerCase()}`) More about #{page.pageTitle}
+            if page.aboutLink
+              a(href=`/about/${page.aboutLink}`) More about #{page.pageTitle}
