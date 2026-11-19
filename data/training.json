@@ -5,7 +5,7 @@
       "type": "repeat",
       "title": "Training",
       "location": "Groton Fire Hall",
-      "when": "4th Tuesday of Each Month - 12:00 AM",
+      "when": "4th Tuesday of Each Month",
       "info": [
         "Groton Community Fire Department",
         "Physical Address:",
@@ -18,7 +18,7 @@
       "type": "repeat",
       "title": "Monthly Meeting",
       "location": "Groton Fire Hall",
-      "when": "2nd Monday of Each Month - 12:00 AM",
+      "when": "2nd Monday of Each Month",
       "info": [
         "Groton Community Fire Department",
         "Physical Address:",
